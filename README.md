@@ -1,5 +1,7 @@
 ## WiFi app
 
+This app was built in 2017 with ionic 2/3. This app was built to access the wifi of the specific place and get some useful information about travel and traveling path. The login of this app can be used for the login in other app which was ionic-report-app. ionic-report-app
+was used to send the report by the mean of video, audio, photo and text messages to complain about specific things or give some suggestions.
 To build the app, you'll need node.js installed in your system.
 
 Install ionic:
