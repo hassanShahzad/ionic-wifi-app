@@ -1,0 +1,8 @@
+{
+  "globalDependencies": {
+    "cordova": "registry:dt/cordova#0.0.0+20160819210047"
+  },
+  "dependencies": {
+    "google-maps": "registry:dt/google-maps#3.2.1+20161129151841"
+  }
+}

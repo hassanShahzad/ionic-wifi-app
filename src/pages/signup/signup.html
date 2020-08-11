@@ -1,0 +1,65 @@
+<ion-header no-border>
+
+  <button  navPop icon-only style=' background : transparent; border-radius: 0px;border-width: 0px; border-color: transparent; margin-top:20px; height: 44px; width: auto   '>
+       <ion-icon ios="ios-arrow-back" md="md-arrow-back" style=' color : white; ' ></ion-icon>
+  </button>
+  <button class="navigation-right-button" (click)="avanti()" >
+     Avanti
+  </button>
+</ion-header> 
+
+
+<ion-content id="home" class="background-Image" no-bounce>
+
+    <form [formGroup]="signup" novalidate>
+
+        <div class="title">Crea un account</div>
+        <div class="break"></div>
+        <hr class="title-underline">
+        <div class="break"></div>
+        
+        <!-- User email -->
+        <div class="label">QUAL È LA TUA EMAIL?</div>
+        <div class="row">
+           <input class="input" autocorrect="off" type="email" placeholder=""  formControlName="email" (input)="onEmailChange()" (blur)="onEmailSubmitted()" (keyup.enter)="hideKeyboard()">
+           <div class="validation-image">
+               <img [src]=validationImageEmail [hidden]=!validationImageEmail />
+           </div>  
+        </div>
+        <hr class="underline">
+        
+        <!-- User first Name --> 
+        <div class="label">QUAL È IL TUO NOME?</div>
+        
+        <div class="row">
+            <input class="input" autocorrect="off"  name="name"  type="text" placeholder=""  formControlName="name" (input)="onNameChange()"  (blur)="onNameSubmitted()" (keyup.enter)="hideKeyboard()">
+            <div class="validation-image">
+               <img [src]=validationImageName [hidden]=!validationImageName />
+            </div>  
+        </div>
+        <hr class="underline">
+        
+        <!-- User last name --> 
+        <div class="label">QUAL È IL TUO COGNOME?</div>
+        <div class="row">
+           <input class="input" autocorrect="off"  type="text"   name="surname"  placeholder="" formControlName="surname"  (input)="onSurNameChange()" (blur)="onSurNameSubmitted()" (keyup.enter)="hideKeyboard()">
+           <div class="validation-image">
+               <img [src]=validationImageSurName [hidden]=!validationImageSurName />
+           </div>  
+        </div>
+        <hr class="underline">
+
+        <!-- User date of birth -->
+        <div class="label">QUAL È LA TUA DATA DI NASCITA?</div>
+        <div class="row">
+          <ion-datetime  class="input" readonly displayFormat="DD-MM-YYYY"  [ngModel]="dateOfBirth | date:'dd-MMMM-yyyy'"  placeholder="Devi avere almeno 18 anni per utilizzare il servizio"  (ionChange)="showDate()" formControlName="birthdate">
+          </ion-datetime>
+          <div class="validation-image">
+               <img [src]=validationImageBirthDate [hidden]=!validationImageBirthDate />
+           </div> 
+        </div> 
+        <hr class="underline"> 
+          
+   </form>  
+
+</ion-content>

@@ -1,0 +1,46 @@
+<ion-header no-border>
+    <button  navPop icon-only style=' background : transparent; border-radius: 0px;border-width: 0px; border-color: transparent; margin-top:20px; height: 44px; width: auto  '>
+	     <ion-icon ios="ios-arrow-back" md="md-arrow-back" style=' color : rgba(92, 197, 193, 1);' ></ion-icon>
+	</button>
+</ion-header>
+
+
+<ion-content no-bounce>
+    <div class="title-black">Informazioni</div>
+    <div class="secondLine-title">sul viaggio</div>
+    <div class="break"></div>
+    <hr class="title-underlineColored">
+    <div class="break"></div>
+    <div class="row" *ngFor="let info of travelInfo; let index = index; 
+                     let last = last; 
+                     let first = first;" >
+
+      <div  *ngIf=" first" class="col-50 vertical-line-upper-background" >
+         <div class="vertical-line-upper-rounded"  ><div class="circle"></div>
+         </div>
+
+      </div>
+      <div  *ngIf=" last" class="col-50 vertical-line-lower-background" >
+         <div class="vertical-line-lower-rounded"  ><div class="circle"></div>
+         </div>
+
+      </div>
+      <div *ngIf=" ( !first && !last) " class="col-50 vertical-line">
+          <div class="circle"></div>
+      </div>
+      
+
+      <div class="col-50 " >
+         <label class="row_labelTravel">
+            {{ info.name }} 
+         </label>
+         <br>
+         <label class="row_labelTravel">
+            {{ info.time }}
+         </label>
+      </div>
+    </div>
+
+   
+
+</ion-content>

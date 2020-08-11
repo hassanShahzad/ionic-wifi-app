@@ -1,0 +1,184 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+
+.md,
+.wp {
+    .back-button {
+        color: white !important;//what ever the color you like
+    }
+}
+
+.navigation-right-button {
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    margin-top: 35px;
+    margin-right: 20px;
+    float: right;
+}
+.background-Image {
+    background:
+        linear-gradient(to top, rgba(0, 86, 109, 1) 0%, rgba(0, 134, 140, 1) 50% , rgba(0, 175, 169, 1) 100% );
+}
+ ion-datetime{position:relative !important;}
+
+
+.title {
+    color: #FFFFFF;
+    font-size: 21pt;
+    line-height: 120%;
+    margin-top: 6vw;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.title-black {
+     @extend .title;
+     color:rgba(0, 0, 0, 1);
+    
+}
+.subtitle {
+    color: rgba(0, 0, 0, 1);
+    font-size: 12pt;
+    line-height: 80%;
+    margin-top: 3vw;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.secondLine-title {
+    @extend .title;
+    color: rgba(0, 0, 0, 1);
+    margin-top: 1vw;
+}
+
+.break {
+    min-height: 5vw;
+}
+
+.break-half {
+    min-height: 2.5vw;
+}
+
+.break-double {
+    min-height: 7.5vw;
+} 
+
+.title-line{
+    border-bottom-width:1px;
+    height: 0px;
+    width: 40px;
+    margin-left: 30px;
+    margin-bottom: 6vw;
+    margin-top: 6vw;
+
+
+}
+.title-underline{
+    @extend .title-line; 
+    border-bottom-color:White;
+
+	
+}
+ .title-underlineColored{
+    @extend .title-line;
+    border-bottom-color:rgba(92, 197, 193, 1);
+}
+.underlineColored{
+    @extend .title-underlineColored;
+    width: 100%;
+    margin-right: 30px;
+
+}
+.underline{
+    @extend .title-line;
+    width: auto;
+    margin-right: 30px;
+    margin-bottom: 6vw;
+    margin-top: 0px;
+}
+.input {
+    
+    background-color: transparent;
+    border-top:    0px solid transparent;
+    border-right:  0px solid transparent;
+    border-left:  0px solid transparent;
+    border-bottom:  0px solid transparent;
+    //border-bottom-width:1px;
+    //border-bottom-color:White;
+    color: White;
+    padding: 16pt    !important;
+    font-weight: bold;
+    font-size: 11pt !important;
+    height: 34pt    !important;
+    width: 100%;
+    margin-left: 30px;
+    margin-right: 30px;
+    //margin-bottom: 6vw;
+    vertical-align: middle  !important;
+
+}
+.row_label {
+   
+    color: rgba(0, 0, 0, 1);
+    padding-top: 13.5px    !important;
+    padding-bottom: 13.5px   !important;
+    font-weight: normal;
+    font-size: 13pt !important;
+    height: 40px    !important;
+    width: 100%;
+    margin-left: 30px;
+    vertical-align: middle  !important;
+
+}
+.label { 
+    background-color: transparent;
+   
+    color: White;
+    // padding: 16pt    !important;
+    font-weight: bold;
+    font-size: 11pt !important;
+    height: 15pt    !important;
+    width: 100%;
+    margin-left: 30px;
+    margin-right: 30px;
+
+} 
+.label-radio { 
+    background-color: transparent;
+    color: White;
+    font-weight: bold;
+    margin-left: 30px;
+
+}   
+.item .item-content {
+  background-color: transparent !important;
+}
+.validation-image {
+        position: absolute;
+        right: 25pt;
+        width: 14pt;
+        margin-top: 10pt;
+        margin-bottom: 10pt;
+        background-color: transparent;
+}
+.input::-moz-placeholder {
+  color: #FDFDFD;
+  opacity: .7;
+}
+
+.input:-ms-input-placeholder {
+  color: #FDFDFD;
+  opacity: .7;
+}
+
+.input::-webkit-input-placeholder {
+  text-indent: 0;
+  color: #FDFDFD;
+  opacity: .7;
+}
+.input-cover {
+  position: static;
+}

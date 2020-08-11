@@ -1,0 +1,44 @@
+<ion-content id="wifi" no-bounce>
+  <div class="break"></div>
+  <div class="title-black">Wifi app</div>
+  <div class="subtitle">La tua app per navigare</div>
+  <div class="break"></div>
+  <hr class="title-underlineColored" />
+  <div class="break"></div>
+  <div class="row">
+    <label class="row_label">
+      Connesso Alla rete Wifi
+    </label>
+    <div class="row-image">
+      <img [src]="wifiImage" />
+    </div>
+    <hr class="underlineColored" />
+  </div>
+  <div class="row">
+    <label class="row_label" on-tap="getTravelInfo()">
+      Informazioni sul viaggio
+    </label>
+    <div class="row-image">
+      <img [src]="travelImage" />
+    </div>
+    <hr class="underlineColored" />
+  </div>
+  <div class="row">
+    <label class="row_label" on-tap="getTrainInfo()">
+      Informazioni su questo treno
+    </label>
+    <div class="row-image">
+      <img [src]="trainImage" />
+    </div>
+    <hr class="underlineColored" />
+  </div>
+  <div class="row">
+    <label class="row_label">
+      Impostazioni
+    </label>
+    <div class="row-image">
+      <img [src]="settingImage" />
+    </div>
+    <hr class="underlineColored" />
+  </div>
+</ion-content>

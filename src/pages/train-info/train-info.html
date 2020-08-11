@@ -1,0 +1,80 @@
+<ion-header no-border>
+  <button
+    navPop
+    icon-only
+    style=" background : transparent; border-radius: 0px;border-width:0px; border-color: transparent; margin-top:20px; height: 44px; width: auto  "
+  >
+    <ion-icon
+      ios="ios-arrow-back"
+      md="md-arrow-back"
+      style=" color : rgba(92, 197, 193, 1);"
+    ></ion-icon>
+  </button>
+</ion-header>
+<ion-content id="wifi" no-bounce>
+  <div class="title-black">Informazioni</div>
+  <div class="secondLine-title">su questo treno</div>
+  <div class="break"></div>
+  <hr class="title-underlineColored" />
+  <div class="break"></div>
+
+  <div class="row">
+    <div class="col-50 col-left" text-left>
+      Name
+    </div>
+    <div class="col-50 col-right" text-right>
+      {{ trainInfo.train }}
+    </div>
+    <hr class="underlineColored" />
+  </div>
+
+  <div class="row">
+    <div class="col-50 col-left" text-left>
+      Wagon
+    </div>
+    <div class="col-50 col-right" text-right>
+      {{ trainInfo.wagon }}
+    </div>
+    <hr class="underlineColored" />
+  </div>
+
+  <div class="row">
+    <div class="col-50 col-left" text-left>
+      Stop
+    </div>
+    <div class="col-50 col-right" text-right>
+      {{ trainInfo.lastStop }}
+    </div>
+    <hr class="underlineColored" />
+  </div>
+
+  <div class="row">
+    <div class="col-50 col-left" text-left>
+      Latitude
+    </div>
+    <div class="col-50 col-right" text-right>
+      {{ trainInfo.position.lat }}
+    </div>
+    <hr class="underlineColored" />
+  </div>
+  <div class="row">
+    <div class="col-50 col-left" text-left>
+      Longitude
+    </div>
+    <div class="col-50 col-right" text-right>
+      {{ trainInfo.position.lng }}
+    </div>
+    <hr class="underlineColored" />
+  </div>
+
+  <div class="row">
+    <div class="col-50 col-left" text-left>
+      Speed
+    </div>
+    <div class="col-50 col-right" text-right>
+      {{ trainInfo.speed.value ? (trainInfo.speed.value + " " +
+      trainInfo.speed.unit) : 'N/A' }}
+    </div>
+    <hr class="underlineColored" />
+  </div>
+</ion-content>

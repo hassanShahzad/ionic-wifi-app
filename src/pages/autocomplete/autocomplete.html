@@ -1,0 +1,57 @@
+
+ <!--  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7gIgWw0OkIgKz3BqalzV4-MEgiwoZTyI&libraries=places" defer></script> -->
+<ion-header no-border>
+  <button  navPop icon-only style=' background : transparent; border-radius: 0px;border-width: 0px; border-color: transparent; margin-top:20px; height: 44px; width: auto   '>
+       <ion-icon ios="ios-arrow-back" md="md-arrow-back" style=' color : white; ' ></ion-icon>
+  </button>
+  <button class="navigation-right-button" (click)="avanti()" >
+     Avanti
+  </button>
+
+</ion-header>
+
+<ion-content id="autocomplete" class="background-Image" no-bounce>
+    <form [formGroup]="userInfo"  novalidate>
+
+        <div class="title">Altre informazioni ...</div>
+        <div class="break"></div>
+        <hr class="title-underline">
+        <div class="break"></div>
+
+
+        <!-- Auto complete city -->
+        <div class="label">IN CHE CITTÀ VIVI?</div>
+        <div class="row">
+            <input class="input"  name="city" formControlName="city" [(ngModel)]="autocomplete.query" type="text" placeholder="" (input)="updateSearch()" (blur)="onCitySubmitted()">
+            <div class="validation-image">
+               <img   [src]=validationImageCity [hidden]=!validationImageCity />
+            </div>
+        </div>
+        <hr class="underline">
+        <ion-list [ngStyle]="{'margin-top':'-5.5vw', 'margin-left':'15px', 'margin-right':'30px', 'border': '0px'}">
+            <ion-item  [ngStyle]="{'background-color': 'rgba(0, 0, 0, 0)', 'height':'40px', 'border': '0px'}" *ngFor="let item of autocompleteItems" tappable (click)="chooseCity(item)">
+            {{ item.description }}
+            </ion-item>
+
+        </ion-list>
+        
+        <!-- Gender -->
+        <div class="label">UOMO O DONNA?</div>
+        <div class="break"></div>
+           
+        <div class="row">
+          <input type="radio" name="gender" value="m" style="margin-left:50px;" formControlName="gender">
+          <div class="label-radio">Uomo</div>
+        </div>
+        
+        <div class="break"></div>
+        <div class="row">
+          <input type="radio" name="gender" value="f" style="margin-left:50px;" formControlName="gender">
+          <div class="label-radio">Donna</div>
+        </div>
+            
+          
+    </form>  
+         
+
+</ion-content>
